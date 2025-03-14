@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbits | Sturktur Aljabar</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Struktur Aljabar</h1>
+        <p>ORBITS, CYLES, DAN ALTERNATIF GRUP</p>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li class="active"><a href="#">Orbits</a></li>
+            <li><a href="cycle.html" target="_blank">Cycle</a></li>
+            <li><a href="group.html" target="_blank">Alternating Group</a></li>
+            <li><a href="rangkuman.html" target="_blank">Rangkuman</a></li>
+            <li><a href="video.html" target="_blank">Video</a></li>
+        </ul>
+    </nav>
+
+    <h2><u>Orbits</u></h2>
+
+    <section id="kotak1">
+        <h3><em>Teorema A-1</em></h3>
+        <p><code>A ≠ ϕ, ρ ∶ A → A, ρ</code> : fungsi bijektif, didefinisikan relasi f sebagai berikut:</p>
+        <p><code>(a,b) ∈ f ↔ ∃ n  ∈ Z ∋ b = ρ<sup>n</sup>(a), ∀ a,b ∈ A</code></p>
+        <p>Relasi f merupakan relasi Equivalen.</p>
+        <p>Bukti:</p>
+        <p>Akan ditunjukkan f merupakan relasi equivalen artinya Relasi f memenuhi 3 sifat yaitu sifat Refleksif,
+            Simetri, Transitif.</p>
+        <ol>
+            <li>
+                <p>Sifat Refleksif : <code>(a,a) ∈ f</code></p>
+                <p>Ambil sembarang <code>a ∈ A</code> maka dengan fungsi identitas kita peroleh</p>
+                <p><code>a = I (a), ∀ a ∈ A</code> atau <code>a = ρ<sup>o</sup>(a), ∀ a ∈ A dan 0 ∈ Z</code></p>
+                <p>Jadi <code>∃ 0 ∈ Z ∋ a = ρ<sup>o</sup>(a), ∀ a ∈ A</code>. Ini berarti <code>(a,a) ∈ f</code>
+                    (Terbukti sifat Refleksif)</p>
+            </li>
+            <li>
+                <p>Sifat Simetri : <code>(a,b) ∈ f →(b,a) ∈ f, ∀ a,b ∈ Z</code></p>
+                <p>Ambil sembarang <code>a,b ∈ A</code> dengan <code>(a,b) ∈ f</code> menurut definisi
+                    <code>∃ n ∈ Z ∋ b=ρ<sup>n</sup>(a)</code>. Dari <code>b = ρ<sup>n</sup>(a)</code> maka
+                    <code>a = ρ<sup>-n</sup>(b)</code> dengan <code>-n ∈ Z</code>. Ini berarti
+                    <code>∃ n ∈ Z ∋ a = ρ<sup>-n</sup>(b)</code> artinya <code>(b,a) ∈ f</code> (Terbukti sifat Simetri)
+                </p>
+            </li>
+            <li>
+                <p>Sifat Transitif :</p>
+                <p><code>(a,b) ∈ f</code> dan <code>(b,c) ∈ f → (a,c) ∈ f, ∀ a,b,c ∈ A</code></p>
+                <p>Ambil sembarang <code>a,b,c ∈ A</code> dengan <code>(a,b) ∈ f dan (b,c) ∈ f</code></p>
+                <p><code>(a,b) ∈ f</code> artinya <code>∃ n ∈ Z ∋ b = ρ<sup>n</sup>(a)</code></p>
+                <p><code>(b,c) ∈ f</code> artinya <code>∃ m ∈ Z ∋ c = ρ<sup>n</sup>(b)</code></p>
+                <p>Jadi <code>c = ρ<sup>m</sup>(b) = ρ<sup>m</sup>(ρ<sup>n</sup>(a)) = ρ<sup>m+n</sup>(a),m+n ∈ Z</code>
+                </p>
+                <p>Artinya <code>(a,c) ∈ f</code> (Terbukti sifat Transitif)</p>
+            </li>
+        </ol>
+        <p>Dengan terbuktinya ketiga sifat tersebut maka f merupakan Relasi Equivalen. Kesimpulan yang diperoleh bahwa
+            Himpunan A terpecah atas kelas-kelas yang saling asing (Cell) yang disebut kelas-kelas equivalen.</p>
+        <p>Dengan kata lain:</p>
+        <p style="text-align: center;"><code>Sa={x ∈ A│(x,a) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ a = ρ<sup>n</sup>(x)}</code>
+        </p>
+        <p style="text-align: center;"><code>Sb={x ∈ A│(x,b) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ b = ρ<sup>n</sup>(x)}</code>
+        </p>
+        <p style="text-align: center;"><code>Sc={x ∈ A│(x,c) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ c = ρ<sup>n</sup>(x)}</code>
+        </p>
+        <p style="text-align: center;"><code>Sd={x ∈ A│(x,d) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ d = ρ<sup>n</sup>(x)}</code>
+        </p>
+        <p>Dan seterusnya</p>
+        <p>Sehingga diperoleh <code>A = Sa ∪ Sb ∪ Sc ∪ Sd ∪…. dan Sa ∩ Sb ∩ Sc ∩ Sd ∩…. = ϕ</code></p>
+    </section>
+
+    <section id="kotak2">
+        <h3><em>Definisi A-1</em></h3>
+        <p><code>ρ</code> merupakan permutasi dari himpunan A, kelas equivalen dalam A dinamakan Orbit, contohnya Sa,
+            Sb, Sc, Sd</p>
+        <h4>Contoh 1 :</h4>
+        <p>Himpunan <code>A ={1,2,3,4,5,6,7,8}</code>; \( ρ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 8 & 6
+            & 7 & 4 & 1 & 5 & 2 \end{pmatrix} \)</p>
+        <p style="text-align: center;">
+            <code>S<sub>1</sub> = {x ∈ A│(1,x) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ x = ρ<sup>n</sup>(1)}</code>
+        </p>
+        <p style="text-align: center;"><code>ρ<sup>1</sup>(1) = 3</code>; <code>ρ<sup>2</sup>(1) = 6</code>;
+            <code>ρ<sup>3</sup>(1) = 1</code>
+        </p>
+        <p>Diperoleh <code>S<sub>1</sub> = {1,3,6}</code></p>
+        <p style="text-align: center;">
+            <code>S<sub>2</sub> = {x ∈ A│(2,x) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ x = ρ<sup>n</sup>(2)}</code>
+        </p>
+        <p style="text-align: center;"><code>ρ<sup>1</sup>(2) = 8</code>; <code>ρ<sup>2</sup>(2) = 2</code> </p>
+        <p>Diperoleh <code>S<sub>2</sub> = {2,8}</code></p>
+        <p style="text-align: center;">
+            <code>S<sub>4</sub> = {x ∈ A│(4,x) ∈ f} = {x ∈ A | ∃ n ∈ Z ∋ x = ρ<sup>n</sup>(4)}</code>
+        </p>
+        <p style="text-align: center;"><code>ρ<sup>1</sup>(4) = 7</code>; <code>ρ<sup>2</sup>(4) = 5</code>;
+            <code>ρ<sup>3</sup>(4) = 4</code>
+        </p>
+        <p>Diperoleh <code>S<sub>4</sub> = {4,5,7}</code></p>
+        <p>Terlihat bahwa <code>S<sub>1</sub> ∪ S<sub>2</sub> ∪ S<sub>4</sub> = A</code> dan <code>S<sub>1</sub> ∩
+            S<sub>2</sub> ∩ S<sub>4</sub> = ϕ</code></p>
+    </section>
+
+    <footer>
+        <p>Struktur Aljabar | Kelompok 3 | PSPM D 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

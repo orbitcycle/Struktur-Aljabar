@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle | Sturktur Aljabar</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Struktur Aljabar</h1>
+        <p>ORBITS, CYLES, DAN ALTERNATIF GRUP</p>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="orbit.html" target="_blank">Orbits</a></li>
+            <li class="active"><a href="#">Cycle</a></li>
+            <li><a href="group.html" target="_blank">Alternating Group</a></li>
+            <li><a href="rangkuman.html" target="_blank">Rangkuman</a></li>
+            <li><a href="video.html" target="_blank">Video</a></li>
+        </ul>
+    </nav>
+
+    <h2><u>Cycles</u></h2>
+
+    <section id="kotak1">
+        <h3><em>Definisi B-1</em></h3>
+        <p><code>ρ</code> merupakan permutasi dari himpunan A, dikatakan cycles jika <code>ρ</code> mempunyai paling
+            banyak 1 orbit yang
+            mengandung lebih dari 1 elemen. Selanjutnya panjang cycles didefenisikan sebagai banyaknya unsur/elemen dari
+            orbit tersebut.</p>
+        <h4>Contoh 1 :</h4>
+        <p>\( ρ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 \\ 2 & 3 & 4 & 1 & 5 \end{pmatrix} \)</p>
+        <p><code>ρ<sup>1</sup>(1) = 2; ρ<sup>2</sup>(1) = 3; ρ<sup>3</sup>(1) = 4; ρ<sup>4</sup>(1) = 1</code>; maka
+            <code>S<sub>1</sub> = {1,2,3,4}</code>
+        </p>
+        <p><code>ρ<sup>1</sup>(5) = 5</code> maka <code>S<sub>1</sub> = {5}</code></p>
+        <h4>Contoh 2 :</h4>
+        <p>\( μ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 2 & 6 & 4 & 5 & 1 & 7 & 8 \end{pmatrix} \)</p>
+        <p>Dapat diperiksa bahwa <code>μ</code> merupakan cycles dan <code>μ</code> dapat ditulis sebagai
+            <code>μ = (1,3,6)</code> dengan panjang cycles 3
+        </p>
+        <h4>Contoh 3 :</h4>
+        <p>\( μ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 \\ 3 & 2 & 5 & 1 & 4 \end{pmatrix} \)</p>
+        <p>Dapat diperiksa bahwa <code>μ</code> merupakan cycles dan dapat ditulis sebagai
+            <code>μ = (1,3,5,4) = (3,5,4,1) = (5,4,1,3) = (4,1,3,5)</code> dengan panjang cycles adalah 4.
+        </p>
+        <h4>Contoh 4 :</h4>
+        <p>\( ρ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 3 & 2 & 6 & 7 & 4 & 1 & 5 \end{pmatrix} \)</p>
+        <p><code>ρ<sup>1</sup>(1) = 3; ρ<sup>2</sup>(1) = 6; ρ<sup>3</sup>(1) = 1</code> maka
+            <code>S<sub>1</sub> = {1,3,6}</code>
+        </p>
+        <p><code>ρ<sup>1</sup>(2) = 2</code> maka S<sub>2</sub> = {2}</p>
+        <p><code>ρ<sup>1</sup>(4) = 7; ρ<sup>2</sup>(4) = 5; ρ<sup>3</sup>(4) = 4</code> maka
+            <code>S<sub>4</sub> = {4,7,5}</code>
+        </p>
+        <p>Dapat dilihat <code>ρ</code> memiliki dua orbit yang mengandung lebih dari 1 unsur yaitu
+            <code>S<sub>1</sub></code> dan <code>S<sub>4</sub></code>, sehingga <code>ρ</code> bukan cycles.
+        </p>
+        <h4>Contoh 5 :</h4>
+        <p>\( μ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 8 & 6 & 7 & 4 & 1 & 5 & 2 \end{pmatrix} \)</p>
+        <p>Dapat diperiksa bahwa <code>μ</code> bukan merupakan cycles karena <code>μ</code> memiliki 3 orbit yang
+            mengandung lebih dari 1 unsur yaitu <code>S<sub>1</sub>,S<sub>2</sub></code>, dan <code>S<sub>4</sub></code>
+            hal itu dapat dilihat pada berikut ini:</p>
+        <p><code>μ<sup>1</sup>(1) = 3; μ<sup>2</sup>(1) = 6; μ<sup>3</sup>(1) = 1</code> maka
+            <code>S<sub>1</sub> = {1,3,6}</code>
+        </p>
+        <p><code>μ<sup>1</sup>(2) = 8; μ<sup>2</sup>(2) = 2</code> maka <code>S<sub>2</sub> = {2,8}</code></p>
+        <p><code>μ<sup>1</sup>(4) = 7; μ<sup>2</sup>(4) = 5; μ<sup>3</sup>(4) = 4</code> maka
+            <code>S<sub>1</sub> = {4,7,5}</code>
+        </p>
+        <p>Jadi, \( μ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 8 & 6 & 7 & 4 & 1 & 5 & 2 \end{pmatrix} =
+            (1,3,6) (2,8) (4,7,5) \)</p>
+        <p>Cycles-cycles <code>(1,3,6);(2,8);(4,7,5)</code> yang saling asing dapat disajikan sebagai berikut :</p>
+        <p>\( (1,3,6) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 2 & 6 & 4 & 5 & 1 & 7 & 8 \end{pmatrix} \)
+        </p>
+        <p>\( (2,8) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 1 & 8 & 3 & 4 & 5 & 6 & 7 & 2 \end{pmatrix} \)
+        </p>
+        <p>\( (4,7,5) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 1 & 2 & 3 & 7 & 4 & 6 & 5 & 8 \end{pmatrix} \)
+        </p>
+        <p>Dapat diperiksa bahwa penggandaan dari <code>(1,3,6)(2,8)(4,7,5)</code> akan menghasilkan</p>
+        <p>\( μ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 8 & 6 & 7 & 4 & 1 & 5 & 2 \end{pmatrix} \).</p>
+    </section>
+
+    <section id="kotak2">
+        <h3><em>Teorema B-1</em></h3>
+        <p>Setiap permutasi <code>ρ</code> dari himpunan yang berhingga adalah product dari cycles-cycles yang saling
+            asing.</p>
+        <p>Bukti :</p>
+        <p>Misal <code>B<sub>1</sub>,B<sub>2</sub>,……,B<sub>r</sub></code> adalah orbit-orbit dari <code>ρ</code> dan
+            misalkan <code>μ<sub>1</sub></code> adalah cycles yang didefenisikan sebagi berikut :</p>
+        <p> \( \mu_1 (x) =
+            \begin{cases}
+            \rho(x), & \forall x \in B \\
+            x, & \text{untuk hal lain}
+            \end{cases} \)
+        </p>
+        <p>Karena orbit-orbit <code>B<sub>1</sub>,B<sub>2</sub>,……,B<sub>r</sub></code> saling asing maka cycles-cycles
+            <code>μ<sub>1</sub>,μ<sub>2</sub>,……,μ<sub>r</sub></code> juga saling asing sehingga penggandaan
+            <code>μ<sub>1</sub>,μ<sub>2</sub>,……,μ<sub>r</sub> = <code>ρ</code></code>.
+        </p>
+        <h4>Contoh 6 :</h4>
+        <p>Perhatikan permutasi \( σ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 5 & 2 & 4 & 3 & 1 \end{pmatrix} \)
+            Permutasi tersebut merupakan penggandaan cycle-cycle yang saling asing yaitu <code>(1,6)</code> dan
+            <code>(2,5,3)</code> atau \( σ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 5 & 2 & 4 & 3 & 1
+            \end{pmatrix} = (1,6)(2,5,3) \)
+        </p>
+        <h4>Contoh 7 :</h4>
+        <p>Misalkan <code>(1, 4, 5, 6)</code> dan <code>(2, 1, 5)</code> adalah cycle-cycle dalam
+            <code>S<sub>6</sub></code>
+        </p>
+        <p>\( (1,4,5,6) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 4 & 2 & 3 & 5 & 6 & 1 \end{pmatrix} \) dan</p>
+        <p>\( (2,1,5) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 5 & 1 & 3 & 4 & 2 & 6 \end{pmatrix} \)</p>
+        <p>Sehingga, \( (1,4,5,6)(2,1,5) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 4 & 3 & 5 & 2 & 1 \end{pmatrix}
+            \)</p>
+        <p>\( (2,1,5)(1,4,5,6) = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 4 & 1 & 3 & 2 & 6 & 5 \end{pmatrix} \)
+            terlihat bahwa sifat komutatif untuk penggandaan cycle yang tidak saling asing tidak berlaku.</p>
+
+    </section>
+
+    <section id="kotak3">
+        <h3><em>Definisi B-2</em></h3>
+        <p>Transposition adalah cycle dengan panjang 2 (dua)</p>
+        <h4>Contoh 1 :</h4>
+        <p>\( σ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 2 & 3 & 4 & 5 & 1 \end{pmatrix} = (1,6) \)
+        </p>
+        <p>Akibatnya : sembarang permutasi yang finite yang mengandung sekurang-kurangnya dua elemen adalah suatu hasil
+            produk ganda transposition.</p>
+        <h4>Contoh 2 :</h4>
+        <p>\( σ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 1 & 5 & 2 & 4 & 3 & 6 \end{pmatrix} = (2,5,3) = (2,3) (2,5)
+            \)
+        </p>
+        <p>Secara umum :</p>
+        <p>
+            \( \left( \begin{array}{c} a_1 \quad a_2 \quad a_3 \quad \dots \quad a_n \\ a_2 \quad a_3 \quad a_4 \quad
+            \dots \quad a_n \end{array} \right) = (a_1, a_2, a_3, \dots, a_n) \)
+        </p>
+        <p>
+            \( (a_1, a_2, a_3, \dots, a_n) = (a_1, a_n)(a_1, a_{n-1}) \dots (a_1, a_3)(a_1, a_2) \)
+        </p>
+        <h4 style="color: orange;">Lemma :</h4>
+        <p><code>σ ∈ S<sub>n</sub>,μ</code> ∶ Transportasi <code>∈ S<sub>n</sub></code>. Jumlah orbit <code>σ</code> dan
+            jumlah orbit <code>σμ</code> berbeda 1 orbit.</p>
+        <h4>Contoh :</h4>
+        <p>Misalkan</p>
+        <p><code>σ = (1,3,6)(2,8)(4,7,5) ∈ S<sub>8</sub></code></p>
+        <p><code>μ = (2,3)</code></p>
+        <p><code>μ σ = (2,3)(1,3,6)(2,8)(4,7,5)</code></p>
+        <p><code>= (1,2,8,3,6)(4,7,5)</code> terdiri dari 2 orbit</p>
+        <p>Sedangkan <code>σ = (1,3,6)(2,8)(4,7,5)</code> terdiri dari 3 orbit</p>
+        <p>Misalkan <code>μ = (3,6)</code></p>
+        <p>Kejadian II dapat dilihat bahwa <code>(3,6) ϵ (1,3,6)</code></p>
+        <p><code>μ σ = (3,6)(1,3,6)(2,8)(4,7,5)</code></p>
+        <p><code>= (1,6) (2,8) (3) (4,7,5)</code></p>
+        <p>Dapat dilihat bahwa orbit dari <code>σ</code> dan <code>μσ</code> berbeda 1</p>
+        <p>Kejadian I orbit dari <code>μσ</code> berkurang 1, sedangkan pada kejadian II orbit dari <code>μσ</code>
+            bertambah 1.</p>
+    </section>
+
+    <footer>
+        <p>Struktur Aljabar | Kelompok 3 | PSPM D 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

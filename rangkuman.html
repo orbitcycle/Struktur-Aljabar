@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangkuman | Sturktur Aljabar</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Struktur Aljabar</h1>
+        <p>ORBITS, CYLES, DAN ALTERNATIF GRUP</p>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="orbit.html" target="_blank">Orbits</a></li>
+            <li><a href="cycle.html" target="_blank">Cycle</a></li>
+            <li><a href="group.html" target="_blank">Alternating Group</a></li>
+            <li class="active"><a href="#">Rangkuman</a></li>
+            <li><a href="video.html" target="_blank">Video</a></li>
+        </ul>
+    </nav>
+
+    <h2><u>Rangkuman</u></h2>
+
+    <section id="rangkuman">
+        <ol>
+            <li><code>ρ</code> merupakan permutasi dari himpunan a, kelas equivalen dalam a dinamakan orbit, Contohnya
+                Sa,Sb,Sc,Sd
+            </li>
+            <li><code>ρ</code> dikatakan cycle jika <code>ρ</code> mempunyai paling banyak 1 orbit yang mengandung lebih
+                dari 1 elemen .</li>
+            <li>Setiap permutasi <code>ρ</code> dari himpunan yang berhingga adalah product dari cycle-cycle yang saling
+                asing.</li>
+            <li>Penggandaan cycle yang tidak saling asing tidak berlaku sifat komutatif.</li>
+            <li>Transposition adalah CYCLE dengan Panjang 2 (dua)
+                <p>Contoh: \( \sigma = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 \\ 5 & 2 & 3 & 4 & 1 \end{pmatrix} = (1,5) \)
+                </p>
+            </li>
+            <li>Suatu permutasi finite adalah genap atau ganjil tergantung apakah permutasi tersebut dapat disajikan
+                dalam jumlah pergandaan transposisi genap atau ganjil.
+                <p>Contoh: \( \sigma = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 5 & 2 & 4 & 3 & 1 \end{pmatrix} =
+                    (1,6) (2,5,3) \)</p>
+                <p><code>=(1,6)(2,3)(2,5)</code> merupakan permutasi ganjil.</p>
+            </li>
+            <li>Subgroup dari Sn yaitu <code>An={ρ ∈ Sn | ρ}</code> : permutasi genap dikatakan Alternaing Grup.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>Struktur Aljabar | Kelompok 3 | PSPM D 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

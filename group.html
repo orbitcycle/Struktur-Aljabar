@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternating Grup | Sturktur Aljabar</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Struktur Aljabar</h1>
+        <p>ORBITS, CYLES, DAN ALTERNATIF GRUP</p>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu">
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="orbit.html" target="_blank">Orbits</a></li>
+            <li><a href="cycle.html" target="_blank">Cycle</a></li>
+            <li class="active"><a href="#">Alternating Group</a></li>
+            <li><a href="rangkuman.html" target="_blank">Rangkuman</a></li>
+            <li><a href="video.html" target="_blank">Video</a></li>
+        </ul>
+    </nav>
+
+    <h2><u>Cycles</u></h2>
+
+    <section id="kotak1">
+        <h3><em>Definisi C-1</em></h3>
+        <p>Suatu permutasi finite adalah genap atau ganjil tergantung apakah permutasi tersebut dapat disajikan dalam
+            jumlah pergandaan transposisi genap atau ganjil.</p>
+        <h4>Contoh 1</h4>
+        <p>\( ρ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 5 & 2 & 4 & 3 & 1 \end{pmatrix} = (1,6) (2,5,3) = (1,6)
+            (2,3) (2,5) \) merupakan permutasi ganjil.
+        </p>
+        <p>Sedangkan :</p>
+        <p>\( ρ = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 3 & 8 & 6 & 4 & 7 & 1 & 5 & 2 \end{pmatrix} = (1,6)
+            (2,5,3) = (1,6)
+            (2,3) (2,5) \) merupakan permutasi genap karena dapat disajikan sebagai penggandaan transposisi sebanyak
+            genap.
+        </p>
+    </section>
+
+    <section id="kotak2">
+        <h3><em>Teorema C-1</em></h3>
+        <p><code>A<sub>n</sub> = {ρ ϵ S<sub>n</sub> | ρ = permutasi genap}</code></p>
+        <p>Operasi <code>ρ * γ</code>∶Operasi penggandaan permutasi</p>
+        <p>A<sub>n</sub> merupakan grup</p>
+        <p>Bukti :</p>
+        <ol>
+            <li>
+                <p>Sifat Tertutup</p>
+                <p>Ambil sembarang <code>ρ γ ϵ A<sub>n</sub></code></p>
+                <p>Maka <code>ρ * γ</code> = (permutasi genap) * (permutasi genap)</p>
+                <p>= permutasi genap <code>ϵ A<sub>n</sub></code></p>
+            </li>
+            <li>
+                <p>Sifat assosiatif dipenuhi karena penggandaan permutasi genap merupakan komposisi dari fungsi</p>
+            </li>
+            <li>
+                <p>Unsur identitas
+                    <code>I = (a<sub>1</sub>,a<sub>2</sub>)  (a<sub>1</sub>,a<sub>2</sub>)  ϵ A<sub>n</sub></code>
+                </p>
+            </li>
+            <li>
+                <p>Unsur Invers</p>
+                <p>Ambil sembarang <code>ρ ϵ A<sub>n</sub></code></p>
+                <p>Misalkan <code>ρ = (a<sub>1</sub>,a<sub>2</sub>)
+                    (a<sub>3</sub>,a<sub>4</sub>)…(a<sub>n-2</sub>,a<sub>n-1</sub>)
+                    (a<sub>n-1</sub>,a<sub>n</sub>)</code></p>
+                <p><code>ρ<sup>(-1)</sup> = (a<sub>n-1</sub>,a<sub>n</sub>)  (a<sub>n-2</sub>,a<sub>n-1</sub>)…(a<sub>3</sub>,a<sub>4</sub>) (a<sub>1</sub>,a<sub>2</sub>)</code>
+                </p>
+                <p><code>ρ * ρ<sup>(-1) = (a<sub>1</sub>,a<sub>2</sub>)
+                    (a<sub>3</sub>,a<sub>4</sub>)…(a<sub>n-2</sub>,a<sub>n-1</sub>)
+                    (a<sub>n-1</sub>,a<sub>n</sub>) * (a<sub>n-1</sub>,a<sub>n</sub>)  (a<sub>n-2</sub>,a<sub>n-1</sub>)…(a<sub>3</sub>,a<sub>4</sub>) (a<sub>1</sub>,a<sub>2</sub>)</code>
+                </p>
+                <p>Dengan menggunakan definisi penggandaan yang menghasilkan identitas yaitu <code>(a<sub>n-1</sub>,a<sub>n</sub>)  (a<sub>n-1</sub>,a<sub>n</sub>) = I</code></p>
+                <p>Maka hasil <code>ρ * ρ<sup>-1</sup> = I</code>. Demikian juga dengan <code>ρ<sup>-1</sup> * ρ = I</code></p>
+                <p>Dengan dipenuhinya keempat sifat maka <code>A<sub>n</sub></code> merupakan grup.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section id="kotak3">
+        <h3><em>Definisi C-2</em></h3>
+        <p>Subgrup dari <code>S<sub>n</sub></code> yaitu <code>A<sub>n</sub> = {ρ ϵ S_n | ρ ∶ permutasi genap}</code> dikatakan Alternating grup.</p>
+    </section>
+
+    <footer>
+        <p>Struktur Aljabar | Kelompok 3 | PSPM D 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
